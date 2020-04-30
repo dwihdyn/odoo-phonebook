@@ -2,7 +2,7 @@ from odoo import models, fields, api
 
 # database.py
 class PhoneBook(models.Model):
-    _name = 'phone.book'
+    _name = 'phone.book'        # db name in psql : phone_book (dot turns to underscore in psql)
     _description = "Phone Book"
 
     # ORM side of things | Similar to peewee

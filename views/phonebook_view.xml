@@ -26,7 +26,7 @@
                 <sheet>
                     <group name="group_top">
                             <group name="group_left">
-                            <button name="print_name" string="pRinT" type="object"/> <!-- create button -->
+                            <button name="print_name" string="Print" type="object"/> <!-- create button -->
                                 <field name="name"/>
                                 <field name="related_partner"/>
                                 <field name="date_of_joining"/>
