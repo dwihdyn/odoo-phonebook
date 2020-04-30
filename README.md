@@ -1,4 +1,6 @@
-# How to replicate this project :
+# Phonebook App : Build using Odoo framework
+
+## How to replicate this project :
 
 1. Setup odoo11 app by following (https://linuxize.com/post/how-to-deploy-odoo-11-on-ubuntu-18-04/#disqus_thread) and npm install issue at (https://stackoverflow.com/questions/60637003/python3-odoo-typeerror-sys-print-is-not-a-function)
 2. Git clone this project anywhere you like (eg : `~/Documents/odoo/custom-modules/phonebook`)
@@ -7,19 +9,19 @@
 5. Go browser -> `localhost:8069` -> Settings tab -> Turn on developer mode -> Apps tab -> Update Apps List -> Search "phonebook" -> Install
 6. REMEMBER to pip install any packages inside odoo virtualenv, by going terminal type -> `sudo su - odoo` -> `source odoo11-venv/bin/activate` -> back to normal by `deactivate` and `exit`
 
-# Made changes & redeploy
+## Made changes & redeploy
 
 1. Make any code changes in your fav code editor (vim, vscode, etc)
-2. Restart server & update app list in `localhost:8069`
+2. Restart server, update app list in `localhost:8069`, go to app to Upgrade
 
-## Plans :
+### Plans :
 
 1. add phonebook app into this module
 2. run metabase locally & integrate psql data to metabase local
 3. deploy to google cloud at (https://www.cloudbooklet.com/install-odoo-13-on-ubuntu-18-04-with-nginx-google-cloud/)
 4. once deployed, integreate psql db with metabase (or google bigquery & data studio)
 
-## You can create your own module boilerplate by :
+### You can create your own module boilerplate by :
 
 - `cd /opt/odoo/custom_addons` # provided custom_addons path has been added in /etc/odoo11.cont
 - `./odoo-bin scaffold module-name custom_addons` # module boilerplate
