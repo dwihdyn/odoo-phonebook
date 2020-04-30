@@ -1,24 +1,28 @@
-from odoo import models,fields, api
+from odoo import models, fields, api
 
+# database.py
 class PhoneBook(models.Model):
     _name = 'phone.book'
     _description = "Phone Book"
 
-    name = fields.Char(string="nAmE", required= True)
-    related_partner = fields.Many2one(comodel_name='res.partner', string="rELatEd pARtnEr")
-    
-    date_of_joining = fields.Date(string="dAtE oF jOiNiNG")
-    category_id = fields.Many2many(comodel_name= 'res.partner.category', string="tAGs")
-    
-    city = fields.Char(string="cItY", required=True)
-    street = fields.Char(string="sTrEEt", required=True)
-    country_id = fields.Many2one(comodel_name='res.country', string="cOUntRy")
-    address = fields.Char(string="fUlL aDdreSs", compute='_calculate_address')
+    # ORM side of things | Similar to peewee
+    name = fields.Char(string="Name", required= True)
+    related_partner = fields.Many2one(comodel_name='res.partner', string="Related Partner")
+    date_of_joining = fields.Date(string="Date Of Joining")
+    category_id = fields.Many2many(comodel_name= 'res.partner.category', string="Tags")
+    city = fields.Char(string="City", required=True)
+    street = fields.Char(string="Street", required=True)
+    country_id = fields.Many2one(comodel_name='res.country', string="Country")
+    address = fields.Char(string="Full Address", compute='_calculate_address')
     address_for_printing = fields.Char(string="Printing Address", compute='return_full_address')
+
+
 
     def print_name(self):
         print("Name of record: %s" %self.name)
         return True
+
+
 
     api.depends('country_id','city','street')
     def _calculate_address(self):
@@ -28,11 +32,14 @@ class PhoneBook(models.Model):
         full_address = self.country_id.name + ' ,' + self.city + ' ,' + self.street
         self.address = full_address
 
+
+
     @api.model
     @api.onchange('name','address')       # if change 'name' or 'address', everything will change automatically
     def return_full_address(self):
         if self.name and self.address:
             self.address_for_printing = 'customer: ' + self.name + ' ,' + self.address
+
 
 
 # see oreilly section6 last chapter on explanation @api.one , self.ensure_one() , @api.model

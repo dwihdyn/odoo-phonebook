@@ -1,6 +1,6 @@
 
 {
-    'name': 'New Module',
+    'name': 'Phonebook',
     'description': 'Inheriting model and odoo view',
     'author': 'Dwi',
     'depends': ['base','sale'],
@@ -17,7 +17,4 @@
         'views/phonebook_view.xml',
     ],
 
-    # 'demo' : [
-    #     'demo/demo.xml',
-    # ],
 }
