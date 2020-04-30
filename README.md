@@ -7,6 +7,11 @@
 5. Go browser -> `localhost:8069` -> Settings tab -> Turn on developer mode -> Apps tab -> Update Apps List -> Search "phonebook" -> Install
 6. REMEMBER to pip install any packages inside odoo virtualenv, by going terminal type -> `sudo su - odoo` -> `source odoo11-venv/bin/activate` -> back to normal by `deactivate` and `exit`
 
+# Made changes & redeploy
+
+1. Make any code changes in your fav code editor (vim, vscode, etc)
+2. Restart server & update app list in `localhost:8069`
+
 ## Plans :
 
 1. add phonebook app into this module
