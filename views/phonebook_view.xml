@@ -2,7 +2,7 @@
     <data>
     <!-- LIST VIEW  -->
         <record id="phone_book_view_tree" model="ir.ui.view">
-            <field name="name">aLL pHONebOoK rEcOrD</field>
+            <field name="name">All Phonebook Records</field>
             <field name="model">phone.book</field>
             <field name="arch" type="xml">
                 <tree>
@@ -19,7 +19,7 @@
 
     <!-- FORM VIEW -->
         <record id="view_calls_form" model="ir.ui.view">
-        <field name="name">pHonEBooK rEcORd</field>
+        <field name="name">Phonebook Records</field>
         <field name="model">phone.book</field>
         <field name="arch" type="xml">    
             <form>
@@ -51,7 +51,7 @@
 
     <!-- record for "ir.actions.act_window" -->
         <record id="action_records_form" model="ir.actions.act_window">
-            <field name="name">pHonEBooK rEcORd</field>
+            <field name="name">Phonebook Records</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">phone.book</field>
             <field name="view_type">form</field>
@@ -59,7 +59,7 @@
         </record>
 
     <!-- Menu Point -->
-    <menuitem id="menu_records" name="pHonEBooK rEcORd" sequence="22"/>
+    <menuitem id="menu_records" name="Phonebook Records" sequence="22"/>
 
     <!-- Action for the Menu Point -->
         <menuitem action="action_records_form" id="menu_action_recs"
