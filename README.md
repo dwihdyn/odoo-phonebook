@@ -28,8 +28,3 @@
 - manifest.py : info that will be shown on odoo apps (kinda frontend)
 - init.py : kickstart backend
 
-### Plans :
-
-1. deploy to google cloud at (https://www.cloudbooklet.com/install-odoo-13-on-ubuntu-18-04-with-nginx-google-cloud/)
-2. once deployed, integreate psql db with metabase (or google bigquery & data studio)
-3. Replicate whole partsindo module inside google cloud & show data using google data studio
